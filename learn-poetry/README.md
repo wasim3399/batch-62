@@ -2,7 +2,7 @@
 - install python (pip installed by default)
 - install pipx `pip install pipx`
 - install poetry `pipx install poetry` and `pipx ensurepath`
-- create new project `poetry new project_name` and cd to project directory
+- create new project `poetry new project_name` or `poetry new todo-server --name=app` and cd to project directory
 - set environment `poetry shell` or `poetry env info --path`
 - `cmd + shift + p` to select interpreter and then enter
 - `poetry new` for new project
