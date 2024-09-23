@@ -32,6 +32,7 @@ def todos():
         todos = session.query(Todo).all()  # Fetching all todos from the database
         return todos 
 
+# create a new todo
 @todo_app.post('/todo')
 def create_todo(todo: Todo):
     with Session(engine) as session:
@@ -39,3 +40,24 @@ def create_todo(todo: Todo):
         session.commit()
         session.refresh(todo)
         return todo
+    
+# update a todo
+@todo_app.put('/todo/{todo_id}')
+def update_todo(todo_id: int, todo: Todo):
+    with Session(engine) as session:
+        existing_todo = session.get(Todo, todo_id)
+        if existing_todo:
+            existing_todo.title = todo.title
+            session.add(existing_todo)
+            session.commit()
+            session.refresh(existing_todo)
+            return existing_todo
+        else:
+            return {'error': 'Todo not found'}
+        
+
+# delete a todo
+@todo_app.delete('/todo/{todo_id}')
+def delete_todo(todo_id: int):
+    with Session(engine) as session:
+        todo = session.get(Todo, todo_id)
