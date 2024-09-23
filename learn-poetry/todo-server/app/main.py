@@ -21,7 +21,7 @@ def create_db_and_tables():
     print('Tables created')
 
 @asynccontextmanager
-async def lifespan(app: FastAPI):
+async def lifespan(todo_app: FastAPI):
     print('server startup')
     create_db_and_tables()
     yield
