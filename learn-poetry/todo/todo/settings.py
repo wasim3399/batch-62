@@ -2,8 +2,8 @@ from starlette.config import Config
 from starlette.datastructures import Secret
 
 try:
-    config = Config(".env")
+    confg = Config(".env")
 except FileNotFoundError:
-    config = Config()
+    confg = Config()
 
-database_url = config("DATABASE_URL", cast=Secret)
+DATABASE_URL = confg("DATABASE_URL", cast=Secret)
