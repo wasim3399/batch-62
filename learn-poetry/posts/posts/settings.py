@@ -6,4 +6,4 @@ try:
 except FileNotFoundError:
     config = Config()
 
-DATABASE_URL = config("DATABASE_URL", cast=Secret, default="sqlite:///db.sqlite3")
+DATABASE_URL = config("DATABASE_URL", cast=Secret)
