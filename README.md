@@ -66,6 +66,8 @@ A neural network in AI is like a digital brain made up of many interconnected no
 
 ### Class 16 - Numpy
 
+### [Numpy Detailed Series](https://www.youtube.com/watch?v=6puhu5ulFSE&list=PLmRclvVt5Dtlgy6PordwKtiUr7fwjuhfz&index=1)
+
 ### Class 17-19 - Pandas
 
 ## [Python By Microsoft](https://www.youtube.com/playlist?list=PLlrxD0HtieHhS8VzuMCfQD4uJ9yne1mE6)
