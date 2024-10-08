@@ -223,8 +223,13 @@ attach image
     - ctr + / to comment or uncomment
 
 
-## [Fast API](https://www.youtube.com/watch?v=Y_eRMGaTMo4&list=PLlD4HFUxnECvSbTUzOaX93EZwHBfl33NZ)
-
+## [Poetry & Fast API](https://www.youtube.com/watch?v=Y_eRMGaTMo4&list=PLlD4HFUxnECvSbTUzOaX93EZwHBfl33NZ)
+## [Poetry Comlete Playlist](https://www.youtube.com/watch?v=g9u-H628jXg&list=PL0vKVrkG4hWqWNAr6rcX0gOvU_eOULnJN)
+- Class-1
+    - Kafka is used to communicate in between services for microservice architecture
+    - What is terraform
+    - [Poetry installation guideline](https://github.com/panaverse/learn-generative-ai/tree/main/05_microservices_all_in_one_platform/09_create_project)
+    - [Poetry Documentation](https://realpython.com/dependency-management-python-poetry/)
 ## [Cloud Engineering](https://www.youtube.com/watch?v=1TzpNX4NRjI&list=PL0vKVrkG4hWrqwmlQ6k8ArJ93BrwX6V4l)
 
 ## [Generative AI Playlist](https://www.youtube.com/watch?v=FwARACe8M_4&list=PL0vKVrkG4hWoulA3tVDU3PoCalDm6I_eh)
