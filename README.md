@@ -65,6 +65,7 @@ A neural network in AI is like a digital brain made up of many interconnected no
 ### Class 13-15 - OOP
 
 ### Class 16 - Numpy
+- https://github.com/ramonhagenaars/nptyping/blob/master/USERDOCS.md
 
 ### [Numpy Detailed Series](https://www.youtube.com/watch?v=6puhu5ulFSE&list=PLmRclvVt5Dtlgy6PordwKtiUr7fwjuhfz&index=1)
 
@@ -212,6 +213,7 @@ attach image
 - [Lecture 2](https://www.youtube.com/watch?v=We9gBPFYswM)
 - [Lecture 3](https://www.youtube.com/watch?v=WIRB8NB3YCQ)
 - [Lecture 4](https://www.youtube.com/watch?v=WkqEW3ZINwU)
+- [Lecture 5](https://www.youtube.com/watch?v=9NiWe4y7LC0)
 
 - Topics Covered
     - 07-natural_language_programming
