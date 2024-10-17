@@ -188,13 +188,16 @@ attach image
     - 05_linux_containers
 
 - Commands:
+    ```
     - docker images
     - docker images -a
     - docker image -ls
+    - docker inspect image (gives information about the image)
     - docker container ls
     - docker container ls -a
     - docker ps
     - docker ps -a
+    - docker logs -f (to see logs continuously)
     - ctr+c
     - exit
     - ctr+p+q
@@ -205,6 +208,7 @@ attach image
     - docker rm container_name
     - docker kill container_name
     - signals in linux
+    ```
 
 ### [Github & Markdown](https://www.youtube.com/watch?v=R7CNbiev2w8)
 
@@ -225,13 +229,49 @@ attach image
     - ctr + / to comment or uncomment
 
 
-## [Poetry & Fast API](https://www.youtube.com/watch?v=Y_eRMGaTMo4&list=PLlD4HFUxnECvSbTUzOaX93EZwHBfl33NZ)
-## [Poetry Comlete Playlist](https://www.youtube.com/watch?v=g9u-H628jXg&list=PL0vKVrkG4hWqWNAr6rcX0gOvU_eOULnJN)
-- Class-1
+## [Poetry & Fast API - Junaid/Jahanzaib Lectures](https://www.youtube.com/watch?v=Y_eRMGaTMo4&list=PLlD4HFUxnECvSbTUzOaX93EZwHBfl33NZ)
+## [Modern Cloud Native AI Stack: Python, Poetry, Docker, Containerization, Kafka, Kong - Building Scalable AI Apps with Clound Native Principles](https://www.youtube.com/watch?v=g9u-H628jXg&list=PL0vKVrkG4hWqWNAr6rcX0gOvU_eOULnJN)
+- **Class-1**
     - Kafka is used to communicate in between services for microservice architecture
     - What is terraform
     - [Poetry installation guideline](https://github.com/panaverse/learn-generative-ai/tree/main/05_microservices_all_in_one_platform/09_create_project)
     - [Poetry Documentation](https://realpython.com/dependency-management-python-poetry/)
+- **Class-2 (Poetry Setup)**
+- **Class-3 (Docker Intro)**
+    - **Virtualization**
+    - [**Containerization**](https://github.com/panaverse/learn-generative-ai/blob/main/05_microservices_all_in_one_platform/14_docker/02_containerization/Dockerfile.dev)
+        - OS without Kernel can be used and is preferable.
+        - **Overview:**
+        ```
+        Containerization
+        Cutting Edge BaseImage Ubuntu
+        Python - Poetry
+        Codebase
+        Packages
+        Uvicorn
+        ```
+        - **Setting Up Docker File:**
+        ```docker
+        Dockerfile                                                          # file name
+        FROM python:3.12                                                    # base image
+        LABEL maintainer="Wasim"                                            # optional author info
+        RUN pip install poetry                                              # install poetry
+        WORKDIR /copy                                                       # create a folder
+        COPY . /copy                                                        # copy paste the code from local machine
+        RUN poetry install                                                  # install packages
+        CMD ["uvicorn", "todo.main:app", "--host=127.0.0.1", "--reload"]    # run the application
+        docker build -f Dockerfile -t my-dev-image                          # run the docker to create the image
+        docker run -d --name my-container -p 8000:8000 my-dev-image         # run the container
+        ```
+
+- **Class-4**
+    
+    - **Overwriting docker command:**
+    ```docker
+    docker run -it --rm my-dev-image /bin/bash -c "poetry run pytest"
+    ```
+
+
 ## [Cloud Engineering](https://www.youtube.com/watch?v=1TzpNX4NRjI&list=PL0vKVrkG4hWrqwmlQ6k8ArJ93BrwX6V4l)
 
 ## [Generative AI Playlist](https://www.youtube.com/watch?v=FwARACe8M_4&list=PL0vKVrkG4hWoulA3tVDU3PoCalDm6I_eh)
