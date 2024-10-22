@@ -218,6 +218,7 @@ attach image
 - [Lecture 3](https://www.youtube.com/watch?v=WIRB8NB3YCQ)
 - [Lecture 4](https://www.youtube.com/watch?v=WkqEW3ZINwU)
 - [Lecture 5](https://www.youtube.com/watch?v=9NiWe4y7LC0)
+- [Lecture 6](https://www.youtube.com/watch?v=bgLAFcTFVpw)
 
 - Topics Covered
     - 07-natural_language_programming
