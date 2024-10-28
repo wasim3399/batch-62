@@ -212,13 +212,14 @@ attach image
 
 ### [Github & Markdown](https://www.youtube.com/watch?v=R7CNbiev2w8)
 
-### Google Colab
+### Online Lectures & Google Colab
 - [Lecture 1](https://www.youtube.com/watch?v=mdLA7rSwuSw)
 - [Lecture 2](https://www.youtube.com/watch?v=We9gBPFYswM)
 - [Lecture 3](https://www.youtube.com/watch?v=WIRB8NB3YCQ)
 - [Lecture 4](https://www.youtube.com/watch?v=WkqEW3ZINwU)
 - [Lecture 5](https://www.youtube.com/watch?v=9NiWe4y7LC0)
 - [Lecture 6](https://www.youtube.com/watch?v=bgLAFcTFVpw)
+- [Lecture 7](https://www.youtube.com/watch?v=euhjnQ1Rou8)
 
 - Topics Covered
     - 07-natural_language_programming
