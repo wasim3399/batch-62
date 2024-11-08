@@ -278,6 +278,12 @@ attach image
 
 ## [Generative AI Playlist](https://www.youtube.com/watch?v=FwARACe8M_4&list=PL0vKVrkG4hWoulA3tVDU3PoCalDm6I_eh)
 
+## [Certified Cloud Native Series](https://www.youtube.com/watch?v=6-W9mY-t430&list=PL0vKVrkG4hWoIq5_1NdK9ae47E7F_NtuK)
+
+## [Python Projects](https://github.com/panaversity/learn-cloud-native-modern-ai-python/tree/main/PROJECTS)
+
+- [Lecture 1](https://www.youtube.com/watch?v=CTkQHyfigvM)
+- [Lecture 2](https://www.youtube.com/watch?v=6xhwkJIWpeg)
 
 
 
