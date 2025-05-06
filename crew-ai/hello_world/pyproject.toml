@@ -1,0 +1,17 @@
+[project]
+name = "hello-world"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Wasim Rashid", email = "wasim.rashid@developers.studio" }
+]
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+hello-world = "hello_world:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

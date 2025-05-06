@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Filters Modal</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Button to open modal */
+        .open-modal-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .open-modal-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Modal Background */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        /* Modal Box */
+        .modal {
+            background: white;
+            width: 400px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            transform: translateY(-20px);
+            opacity: 0;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        /* Modal Header */
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Close Button */
+        .close-modal {
+            cursor: pointer;
+            font-size: 20px;
+            border: none;
+            background: none;
+        }
+
+        /* Form Fields */
+        .modal-body label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .modal-body input,
+        .modal-body select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* Submit Button */
+        .apply-btn {
+            margin-top: 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .apply-btn:hover {
+            background-color: #218838;
+        }
+
+        /* Show Modal Class */
+        .show-modal {
+            display: flex;
+        }
+
+        .show-modal .modal {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Button to Open Modal -->
+    <button class="open-modal-btn" onclick="openModal()">Advanced Filters</button>
+
+    <!-- Modal Container -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-header">
+                <span>Advanced Filters</span>
+                <button class="close-modal" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <label for="filter">Select Filter:</label>
+                <select id="filter">
+                    <option value="allTime">All Time</option>
+                    <option value="allTime">This Month</option>
+                    <option value="allTime">This Week</option>
+                    <option value="allTime">Last Month</option>
+                    <option value="allTime">This Year</option>
+                    <option value="custom">Custom Date Range</option>
+                </select>
+
+                <div id="dateRangeFields" style="display: none;">
+                    <label for="fromDate">From Date:</label>
+                    <input type="date" id="fromDate">
+
+                    <label for="toDate">To Date:</label>
+                    <input type="date" id="toDate">
+                </div>
+
+                <button class="apply-btn">Apply Filters</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('modalOverlay').classList.add('show-modal');
+        }
+
+        function closeModal() {
+            document.getElementById('modalOverlay').classList.remove('show-modal');
+        }
+
+        // Close modal when clicking outside the box
+        document.getElementById('modalOverlay').addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeModal();
+            }
+        });
+
+        // Show/Hide date range fields based on selection
+        document.getElementById('filter').addEventListener('change', function() {
+            let dateRangeFields = document.getElementById('dateRangeFields');
+            if (this.value === 'custom') {
+                dateRangeFields.style.display = 'block';
+            } else {
+                dateRangeFields.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>
