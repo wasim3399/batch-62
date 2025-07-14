@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../CardEye-Backend"
+		},
+		{
+			"path": "../../../CardEye-Frontend"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "batch-62"
+	}
+}

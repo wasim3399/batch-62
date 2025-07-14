@@ -1,0 +1,140 @@
+.popup-container {
+  width: 380px;
+  min-height: 300px;
+  padding: 20px;
+  background: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #222;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: #007bff;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 15px 0 10px 0;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #e9ecef;
+  font-weight: 600;
+}
+
+#results {
+  flex: 1;
+  margin-bottom: 10px;
+}
+
+.loading {
+  color: #888;
+  text-align: center;
+  margin-top: 30px;
+  font-style: italic;
+}
+
+.tech-section {
+  margin-bottom: 15px;
+}
+
+.tech-subsection {
+  margin-bottom: 10px;
+}
+
+.tech-subsection-title {
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tech-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 8px;
+}
+
+.tech-table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.9rem;
+  vertical-align: middle;
+}
+
+.tech-table td:first-child {
+  width: 30px;
+  text-align: center;
+}
+
+.tech-table td:last-child {
+  color: #333;
+  font-weight: 500;
+}
+
+.tech-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 4px;
+  background: #f8f9fa;
+  color: #007bff;
+}
+
+.no-tech {
+  color: #999;
+  font-style: italic;
+  font-size: 0.85rem;
+  padding: 8px;
+  text-align: center;
+  background: #f8f9fa;
+  border-radius: 6px;
+  margin: 5px 0;
+}
+
+footer {
+  text-align: center;
+  color: #aaa;
+  font-size: 0.8em;
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+/* Technology-specific colors */
+.tech-html { color: #e34c26; }
+.tech-css { color: #264de4; }
+.tech-js { color: #f7df1e; }
+.tech-ts { color: #3178c6; }
+.tech-php { color: #777bb4; }
+.tech-python { color: #3776ab; }
+.tech-ruby { color: #cc342d; }
+.tech-java { color: #ed8b00; }
+.tech-csharp { color: #68217a; }
+.tech-go { color: #00add8; }
+.tech-node { color: #339933; }
+.tech-react { color: #61dafb; }
+.tech-angular { color: #dd0031; }
+.tech-vue { color: #4fc08d; }
+.tech-jquery { color: #0769ad; }
+.tech-bootstrap { color: #7952b3; }
+.tech-tailwind { color: #06b6d4; }
+.tech-laravel { color: #ff2d20; }
+.tech-django { color: #092e20; }
+.tech-express { color: #000000; }
+.tech-wordpress { color: #21759b; }
+.tech-aws { color: #ff9900; }
+.tech-google { color: #4285f4; }
+.tech-azure { color: #0089d6; } 

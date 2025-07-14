@@ -1,0 +1,19 @@
+[project]
+name = "chainlit-hello"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "wasim3399", email = "wasim.rashid@developers.studio" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "chainlit>=2.6.0",
+]
+
+[project.scripts]
+chainlit-hello = "chainlit_hello:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
