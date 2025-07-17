@@ -1,5 +1,3 @@
-import chainlit as cl
-
 import os
 from dotenv import load_dotenv
 import logging
@@ -35,12 +33,12 @@ config = RunConfig(
 
 logging.getLogger("openai.agents").setLevel(logging.WARNING)
 
-@cl.on_chat_start
-async def main():
-    await cl.Message(content="Hello, how can I help you today?").send()
-
-@cl.on_message
-async def main(message: cl.Message):
+def main():
+    prompt = input("Enter your prompt (default: 'Hello, how are you.'): ") or "Hello, how are you."
     agent = Agent(name="Assistant", instructions="You are a helpful assistant", model=model)
-    result = Runner.run_sync(agent, message.content, run_config=config)
-    await cl.Message(content=result.final_output).send()
+    result = Runner.run_sync(agent, prompt, run_config=config)
+    print("\nAgent Response:\n")
+    print(result.final_output)
+
+if __name__ == "__main__":
+    main() 
