@@ -36,11 +36,36 @@ config = RunConfig(
 logging.getLogger("openai.agents").setLevel(logging.WARNING)
 
 @cl.on_chat_start
-async def main():
+async def on_chat_start():
+    cl.user_session.set("history", [])
     await cl.Message(content="Hello, how can I help you today?").send()
 
 @cl.on_message
-async def main(message: cl.Message):
-    agent = Agent(name="Assistant", instructions="You are a helpful assistant", model=model)
-    result = Runner.run_sync(agent, message.content, run_config=config)
+async def on_message(message: cl.Message):
+    # History uthao ya empty list lo
+    history = cl.user_session.get("history") or []
+    # Naya user message ko history mein daalo
+    history.append({"role": "user", "content": message.content})
+
+    # Agent ko pura history bhejo
+    agent = Agent(
+        name="Assistant",
+        instructions="You are a helpful assistant",
+        model=model
+    )
+
+    # Messages ko ek string bana ke agent ko bhej rahe hain
+    conversation = ""
+    for msg in history:
+        if msg["role"] == "user":
+            conversation += f"User: {msg['content']}\n"
+        else:
+            conversation += f"Assistant: {msg['content']}\n"
+
+    result = Runner.run_sync(agent, conversation, run_config=config)
+
+    # Assistant ka response bhi history mein daalo
+    history.append({"role": "assistant", "content": result.final_output})
+    cl.user_session.set("history", history)
+
     await cl.Message(content=result.final_output).send()
